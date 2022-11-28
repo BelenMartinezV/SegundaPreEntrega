@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 75%;
+}
+
+header{
+    display: grid;
+    justify-content: center;
+}
+
+nav ul{
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav{
+    background-color: rgb(140, 140, 140);
+}
+
+ul li{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 4px;
+    }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    margin-top:20px 20px 0px 20px;
+}
+
+aside{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    margin: 5px 20px 0px 20px;
+    background-color: aquamarine;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    margin: 20px;
+    background-color: rgb(227, 226, 226);
+    border: 2px solid grey;
+    padding: 10px;
+}
+
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    border: 10px solid rgb(202, 234, 223);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(170, 229, 209);
+}
+
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none; 
+    border: 2px solid rgb(64, 66, 65);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+figcaption{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color:black;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color:black; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+img{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius:5px;
+}
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    background-color: rgb(140, 140, 140);
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.zoom:hover{
+    transform: scale(1.2);
+}
+
+/*grid area*/
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+.descripcion{
+    grid-area: descripcion;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.galeria-grid{
+    grid-area: galeria-grid;
+}
+
+/*Grilla*/
+
+.envoltura{
+    background-color: white;
+    margin-bottom: 2em;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "descripcion"
+    "aside"
+    "galeria-grid"
+    "footer";
+}
+    
+.galeria-grid-img{
+    background-color: rgb(236, 236, 237);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+/* MQ */
+
+@media(min-width:500px){
+    .evoltura{
+        margin: 0;
+        display: grid;
+        grid-template-areas: 
+        "header       header"
+        "nav          nav"
+        "descripcion  descripcion"
+        "aside        aside"
+        "galeria-grid galeria-grid"
+        "footer       footer";
+        gap: 20px;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 120px;
+    }
+
+    ul li{
+        list-style: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-flex;
+        padding: 4px;
+        }
+}
+
+aside{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: none; 
+    margin: 5px 20px 0px 20px;
+    background-color: aquamarine;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+@media(min-width:768px){
+    .evoltura{
+        margin: 0;
+        display: grid;
+        grid-template-areas: 
+        "header       header         header"
+        "nav          nav            nav"
+        "descripcion  descripcion    descripcion"
+        "aside        aside          aside"
+        "galeria-grid galeria-grid   galeria-grid"
+        "footer       footer         footer";
+        gap:10px;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    .galeria-grid-img{
+        background-color: rgb(236, 236, 237);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        text-transform: none; 
+        margin: 10px 20px 5px 20px;
+        background-color: rgb(227, 226, 226);
+        border: 2px solid grey;
+        padding: 10px 20px 20px 20px;
+    }
+}
+
+@media(min-width:1024px){
+    .galeria-grid-img{
+        background-color: rgb(236, 236, 237);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        gap: 0px;
+    }
+
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        text-transform: none; 
+        margin: 10px 20px 5px 10px;
+        background-color: rgb(227, 226, 226);
+        border: 2px solid grey;
+        padding: 30px 30px 30px 20px;
+    }
+}
